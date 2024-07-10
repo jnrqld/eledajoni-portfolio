@@ -9,24 +9,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!--FOR ICONS-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="h-screen">
 
     <!--NAVIGATION BAR-->
-    <nav class="bg-white shadow-lg mt-0 fixed w-full z-40 top-0">
-        <div class="container mx-auto flex flex-row items-center">
-            <div class="mx-auto flex flex-row items-center">
-                <img src="./images/j-logo.png" alt="logo" class="w-16 h-16 flex items-center justify-start">
-                <p>Joni&nbspEleda</p>
+    <nav class="bg-white shadow-lg mt-0 fixed w-full z-40 top-0 md:flex md:items-center md:justify-between">
+        <div class="container md:flex md:items-center md:justify-between mx-auto">
+            <div class="flex justify-between items-center">
+                <span class="ml-auto flex flex-row items-center w-full">
+                    <img src="./images/j-logo.png" alt="logo" class="w-16 h-16 flex items-center justify-start">
+                    <p>Joni&nbspEleda</p>
+                </span>
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                    <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+                </span>
             </div>
-            <div class="container mx-auto h-full">
-                <ul class="flex items-center justify-end h-full space-x-6">
-                    <li class="text-darkBrown-0"><a href="#Hero" class="hover:text-gray-400">Home</a></li>
-                    <li class="text-darkBrown-0"><a href="#AboutMe" class="hover:text-gray-400">About Me</a></li>
-                    <li class="text-darkBrown-0"><a href="#Projects" class="hover:text-gray-400">Projects</a></li>
-                    <li class="text-darkBrown-0"><a href="#Contact" class="hover:text-gray-400">Contact</a></li>
-                </ul>
-            </div>
+            <ul class="md:flex md:items-center z-[1] md:z-auto md:static absolute bg-white width-full right-0 md:width-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 md:shadow-none shadow-lg  top-[-400px] transition ease duration-500">
+                <li class="text-darkBrown-0 mx-4 my-6 md:my-0"><a href="#Hero" class="hover:text-darkBeige-0">Home</a></li>
+                <li class="text-darkBrown-0 mx-4 my-6 md:my-0"><a href="#AboutMe" class="hover:text-darkBeige-0">About Me</a></li>
+                <li class="text-darkBrown-0 mx-4 my-6 md:my-0"><a href="#Projects" class="hover:text-darkBeige-0">Projects</a></li>
+                <li class="text-darkBrown-0 mx-4 my-6 md:my-0"><a href="#Contact" class="hover:text-darkBeige-0">Contact</a></li>
+            </ul>  
         </div>
     </nav>
 
@@ -41,34 +47,47 @@
 
     <!--ABOUT ME-->
     <section id="AboutMe" class="pt-36">
-        <div class="bg-dirtyWhite-0 py-10">
+        <div class="py-10">
             <div class="container mx-auto flex flex-col justify-center items-center">
                 <h2 class="font-playFair text-3xl text-darkBrown-0">About Me</h2>
                 <p class="text-center py-4">Hi, I’m Joni Roi Q. Eleda, a 4th year Computer Science student at STI College Ortigas-Cainta. 
                     I am an aspiring UI/UX Designer, eager to gain industry knowledge and skills related to UI/UX.
                     I am passionate about creating beautiful, intuitive, and functional interfaces, always keeping 
                     the user at the center of my design process.</p>
-            </div>
-            <div class="flex flex-row justify-center items-center space-x-20 py-12">
-                <h2 class="text-xl font-playFair font-bold text-darkBrown-0">Skills</h2>
-                <div class="">
-                    <ul class="flex flex-col">
-                        <li>UI/UX Design</li>
-                        <li>Wireframing</li>
-                        <li>Prototyping</li>
-                        <li>Figma</li>
-                    </ul>
-                    <ul class="flex flex-col">
-                        <li>HTML, CSS, TailwindCSS</li>
-                        <li>Java, C#</li>
-                    </ul>
+
+                <h3 class="text-xl py-6 font-playFair font-bold text-darkBrown-0">Skills</h3>
+                <!--SKILLS CARDS-->    
+                <div class="grid grid-cols-2 justify-center gap-8 md:grid-cols-5">
+                    <div class="grid max-w-56 max-h-56 rounded overflow-hidden py-4 px-4 shadow-lg bg-dirtyWhite-0">
+                        <img src="./images/uiux.png" class="w-12 h-12 grid justify-self-center" alt="web-design icon">
+                        <p class="text-base pt-4 text-center text-darkBrown-0">UI/UX Design</p>
+                    </div>
+                    <div class="grid max-w-56 max-h-56 rounded overflow-hidden py-4 px-4 shadow-lg bg-dirtyWhite-0">
+                        <img src="./images/wireframe.png" class="w-12 h-12 grid justify-self-center" alt="web-design icon">
+                        <p class="text-base pt-4 text-center text-darkBrown-0">Wireframing</p>
+                    </div>
+                    <div class="grid max-w-56 max-h-56 rounded overflow-hidden py-4 px-4 shadow-lg bg-dirtyWhite-0">
+                        <img src="./images/prototyping.png" class="w-12 h-12 grid justify-self-center" alt="web-design icon">
+                        <p class="text-base pt-4 text-center text-darkBrown-0">Prototyping</p>
+                    </div>
+                    <div class="grid max-w-56 max-h-56 rounded overflow-hidden py-4 px-4 shadow-lg bg-dirtyWhite-0">
+                        <img src="./images/landing-page.png" class="w-12 h-12 grid justify-self-center" alt="web-design icon">
+                        <p class="text-base pt-4 text-center text-darkBrown-0">Web Design</p>
+                    </div>
+                    <div class="grid max-w-56 max-h-56 rounded overflow-hidden py-4 px-4 shadow-lg bg-dirtyWhite-0">
+                        <img src="./images/data.png" class="w-12 h-12 grid justify-self-center" alt="web-design icon">
+                        <p class="text-base pt-4 text-center text-darkBrown-0">Java and C#</p>
+                    </div>
                 </div>
-            </div>
-            <div class="flex flex-row space-x-8 items-center justify-center pt-12">
+                <!--DOWNLOAD RESUME-->
+                <div class="flex flex-row space-x-8 items-center justify-center pt-14">
                     <p>Want to know more about me? You may download my resume.</p>
-                    <button class="bg-darkBeige-0 hover:bg-darkBrown-0 hover:text-darkBeige-0 text-darkBrown-0 font-bold py-2 px-4 rounded-full">
-                        Download
-                    </button>
+                        <a href="./images/EledaJoni-Resume.pdf" download>
+                            <button class="bg-darkBeige-0 hover:bg-darkBrown-0 hover:text-darkBeige-0 text-darkBrown-0 font-bold py-2 px-4 rounded-full">
+                            Download
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -90,23 +109,23 @@
             <p>A design concept for a fashion e-commerce website for women.</p>
             <img src="./images/labellewebsite.png" alt="website photos">
             <h4 class="text-lg font-playFair pb-4 text-darkBrown-0">Prototype</h4>
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600" 
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRAUq6DnbuaBgjZYge8fum6%2FeCommerce-Website---LaBelle%3Fnode-id%3D1-2%26t%3Dzr2N4fnqTqopvmSy-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26page-id%3D0%253A1" 
             allowfullscreen></iframe>
         </div>
     </section>
 
     <!--CONTACT-->
-    <section id="Contact" class="bg-dirtyWhite-0">
+    <section id="Contact">
         <div class="container mx-auto my-40 py-28 flex flex-row items-center justify-center space-x-24">
             <div class="flex flex-col">
                 <h3 class="text-2xl font-playFair font-bold text-left text-darkBrown-0">Let's work together!</h3>
                 <p class="text-left">You may contact me through the following.</p>    
             </div>    
-            <div class="flex flex-row space-x-4">
-                <a href="https://www.linkedin.com/in/jonieleda/" target="_blank"><img src="./images/icon-linkedin.svg" class="w-16 h-16" alt="linkedin icon"></a>
-                <a href="https://mail.google.com/mail/?view=cm&to=joniqueeleda@gmail.com&su=SUBJECT&body=BODY" target="_blank"><img src="./images/icon-email.png" class="w-16 h-16" alt="email icon"></a>
-                <a href="viber://chat?number=09456490047" target="_blank"><img src="./images/icon-viber.svg" class="w-16 h-16" alt="viber icon"></a>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <a href="https://www.linkedin.com/in/jonieleda/" target="_blank"><img src="./images/icon-linkedin.svg" class="w-12 h-12 lg:w-16 lg:h-16" alt="linkedin icon"></a>
+                <a href="https://mail.google.com/mail/?view=cm&to=joniqueeleda@gmail.com&su&body" target="_blank"><img src="./images/icon-email.png" class="w-12 h-12 lg:w-16 lg:h-16" alt="email icon"></a>
+                <a href="viber://chat?number=09456490047" target="_blank"><img src="./images/icon-viber.svg" class="w-12 h-12 lg:w-16 lg:h-16" alt="viber icon"></a>
             </div>
         </div>
     </section>
@@ -115,5 +134,12 @@
     <footer>
         <p class="text-center">© 2024 Joni Eleda. All rights reserved.</p>
     </footer>
+
+    <script>
+        function Menu(e){
+          let list = document.querySelector('ul');
+          e.name === 'menu' ? (e.name = "close",list.classList.add('top-[50px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[50px]'),list.classList.remove('opacity-100'))
+        }
+      </script>
 </body>
 </html>
